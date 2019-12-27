@@ -1,54 +1,115 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
-import { Container, ContainerLogo, ContainerCards, Logo } from "./styles";
+import {
+  Container,
+  BackgroundTop,
+  BackgroundBotton,
+  Logo,
+  ContainerCards,
+  ContainerLogin,
+  ContainerLoginTop,
+  AccountInfo,
+  ButtonChange,
+  ContainerLoginBotton,
+  ButtonEnter,
+  Text,
+  Avatar,
+  ContainerAccountInfo,
+  ContainerIsafe,
+  ContainerIcon,
+  ContainerIsafeLeft,
+  Shield,
+  Lock,
+  ContainerIsafeRight,
+  RoundedBackground,
+  MoreIcon,
+  ContainerInterPag,
+  ContainerInterPagLeft,
+  ContainerInterpagRight,
+  ScannerIcon,
+  AttachMoney,
+  QrCodeIcon,
+  ContainerIconText,
+  LogoInterPag
+} from "./styles";
 import Card from "../../components/Card";
-import { bold } from "ansi-colors";
 
 export default function Signin() {
   return (
     <Container>
-      <ContainerLogo>
+      <BackgroundTop>
         <Logo />
-      </ContainerLogo>
-      <ContainerCards>
-        <Card>
-          <View style={{ justifyContent: "center", alignContent: "center", marginTop: 20 }}>
-            <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
-              <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
-                <View
-                  style={{
-                    width: 50,
-                    height: 50,
-                    borderRadius: 25,
-                    backgroundColor: "#e7e7f1",
-                    justifyContent: "center",
-                    alignItems: "center"
-                  }}
-                >
-                  <Text style={{ color: "#f5f5fa" }}>LP</Text>
-                </View>
-                <View style={{ paddingLeft: 15, width: 150 }}>
-                  <Text style={{ color: "#484850", fontSize: 15 }}>Lucas Pereira Santos</Text>
-                </View>
-              </View>
-              <TouchableOpacity
-                style={{
-                  backgroundColor: "#F5F6FA",
-                  borderWidth: 1,
-                  borderColor: "#eaebef",
-                  width: 90,
-                  height: 30,
-                  justifyContent: "center",
-                  alignItems: "center",
-                  borderRadius: 5
-                }}
-              >
-                <Text>ALTERAR</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-        </Card>
-      </ContainerCards>
+      </BackgroundTop>
+      <BackgroundBotton>
+        <ContainerCards>
+          <Card>
+            <ContainerLogin>
+              <ContainerLoginTop>
+                <AccountInfo>
+                  <Avatar>
+                    <Text style={{ color: "#fff" }}>LP</Text>
+                  </Avatar>
+                  <ContainerAccountInfo>
+                    <Text style={{ color: "#4D4D59", fontSize: 15 }}>LUCAS PEREIRA SANTOS</Text>
+                    <Text style={{ color: "#898C9D" }}>1733512-4</Text>
+                  </ContainerAccountInfo>
+                </AccountInfo>
+                <ButtonChange>
+                  <Text style={{ color: "#4D4D59", fontWeight: "bold" }}>ALTERAR</Text>
+                </ButtonChange>
+              </ContainerLoginTop>
+              <ContainerLoginBotton>
+                <ButtonEnter>
+                  <Text style={{ color: "#fff", fontWeight: "bold" }}>ENTRAR</Text>
+                </ButtonEnter>
+              </ContainerLoginBotton>
+            </ContainerLogin>
+          </Card>
+          <Card>
+            <ContainerIsafe>
+              <ContainerIsafeLeft>
+                <ContainerIcon>
+                  <Shield />
+                  <Lock />
+                </ContainerIcon>
+                <Text style={{ color: "#6d6f7b", fontSize: 20 }}>i-Safe</Text>
+              </ContainerIsafeLeft>
+              <ContainerIsafeRight>
+                <RoundedBackground>
+                  <MoreIcon />
+                </RoundedBackground>
+                <Text>Gerar</Text>
+              </ContainerIsafeRight>
+            </ContainerIsafe>
+          </Card>
+          <Card>
+            <ContainerInterPag>
+              <ContainerInterPagLeft>
+                <LogoInterPag />
+              </ContainerInterPagLeft>
+              <ContainerInterpagRight>
+                <ContainerIconText>
+                  <RoundedBackground>
+                    <ContainerIcon>
+                      <ScannerIcon />
+                      <AttachMoney />
+                    </ContainerIcon>
+                  </RoundedBackground>
+                  <Text>Pagar</Text>
+                </ContainerIconText>
+                <ContainerIconText>
+                  <RoundedBackground>
+                    <ContainerIcon>
+                      <ScannerIcon />
+                      <QrCodeIcon />
+                    </ContainerIcon>
+                  </RoundedBackground>
+                  <Text>Receber</Text>
+                </ContainerIconText>
+              </ContainerInterpagRight>
+            </ContainerInterPag>
+          </Card>
+        </ContainerCards>
+      </BackgroundBotton>
     </Container>
   );
 }
