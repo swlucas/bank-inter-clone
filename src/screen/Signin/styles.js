@@ -12,7 +12,7 @@ export const Container = styled.View`
 `;
 
 export const BackgroundTop = styled.View`
-  flex: 49;
+  flex: 1;
   justify-content: center;
   align-items: center;
   /* background-image: linear-gradient(208.07deg,#ff8700,#ff500f); */
@@ -20,7 +20,7 @@ export const BackgroundTop = styled.View`
 `;
 
 export const BackgroundBotton = styled.View`
-  flex: 61;
+  
   align-items: center;
 
   background-color: #ffffff;
@@ -40,8 +40,6 @@ export const LogoInterPag = styled.Image.attrs({
 `;
 
 export const ContainerCards = styled.View`
-  flex: 50;
-  position: absolute;
   top: -20;
 `;
 export const ContainerLogin = styled.View`
